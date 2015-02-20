@@ -19,13 +19,19 @@ module SessionHelpers
   end
 
   def edit_restaurant
-    click_link('editKFC')
+    click_link('edit KFC')
   end
 
   def make_restaurant
     click_link 'Add a restaurant'
     fill_in 'Name', with: 'KFC'
     click_button 'Create Restaurant'
+  end
+
+  def make_review   
+    click_link 'Review KFC'
+    fill_in 'Thoughts', with: 'yay'
+    click_button 'Leave Review'
   end
 
 end

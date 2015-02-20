@@ -40,12 +40,20 @@ context "user signed in on the homepage" do
   end
 
   context 'editing reviews' do
-    it 'can only edit if you created restaurant' do
+    it 'can only delete if you created restaurant' do
       make_restaurant
       click_link('Sign out')
       sign_up_two
       click_link('Delete KFC')
       expect(page).to have_content('Cannot delete restaurants you have not created')
+    end
+
+    it 'can only edit if you created restaurant' do
+      make_restaurant
+      click_link('Sign out')
+      sign_up_two
+      click_link('Edit KFC')
+      expect(page).to have_content('Cannot edit restaurants you have not created')
     end
   end
 end

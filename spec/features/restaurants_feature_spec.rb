@@ -53,9 +53,10 @@ include SessionHelpers
       sign_up
       make_restaurant
   	  click_link 'Edit KFC'
-  	  fill_in 'Name', with: 'Kentucky Friend Chicken'
+      save_and_open_page
+  	  fill_in 'Name', with: 'Kentucky Fried Chicken'
   	  click_button 'Update Restaurant'
-  	  expect(page).to have_content 'Kentucky Friend Chicken'
+  	  expect(page).to have_content 'Kentucky Fried Chicken'
   	  expect(current_path).to eq '/restaurants'
     end
   end

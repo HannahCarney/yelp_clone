@@ -25,7 +25,6 @@ feature 'reviewing' do
 	scenario 'when restaurant is deleted so are reviews' do
 	  make_restaurant
 	  click_link "Review KFC"
-	  save_and_open_page
 	  fill_in "Thoughts", with: 'meh'
 	  select '3', from: 'Rating'
 	  click_button 'Leave Review'
@@ -33,5 +32,10 @@ feature 'reviewing' do
     expect(page).to_not have_content('Cannot delete restaurants you have not created')
 	end
 
-	
+	scenario 'users are not allowed to write more than one review' do
+		make_restaurant
+		make_review
+		make_review
+		expect(page).to have_content('Cannot add more than one review for a restaurant')
+	end	
 end
