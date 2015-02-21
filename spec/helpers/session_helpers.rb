@@ -36,7 +36,6 @@ module SessionHelpers
 
   def leave_review(thoughts, rating)
     visit '/restaurants'
-    save_and_open_page
     click_link 'Review KFC'
     fill_in 'Thoughts', with: thoughts
     select rating, from: 'Rating'
