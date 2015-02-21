@@ -1,10 +1,13 @@
+require 'star_helper'
+
 class RestaurantsController < ApplicationController
+
+  include StarHelper
 
   before_action :authenticate_user!, :except => [:index, :show]
 
   def index
     @restaurants = Restaurant.all
-    @signed_in_user = current_user
   end
 
   def new

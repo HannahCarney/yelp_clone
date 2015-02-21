@@ -53,7 +53,6 @@ include SessionHelpers
       sign_up
       make_restaurant
   	  click_link 'Edit KFC'
-      save_and_open_page
   	  fill_in 'Name', with: 'Kentucky Fried Chicken'
   	  click_button 'Update Restaurant'
   	  expect(page).to have_content 'Kentucky Fried Chicken'
@@ -84,7 +83,6 @@ include SessionHelpers
   			expect(page).to have_content 'error'
   		end
   	end
-
   end
 
   context 'log in' do
@@ -92,6 +90,16 @@ include SessionHelpers
       visit '/restaurants'
       click_link 'Add a restaurant'
       expect(page).to have_content 'You need to sign in or sign up before continuing.'
+    end
+  end
+
+  context 'average rating' do
+    it 'displays an average rating for all reviews' do
+      sign_up
+      make_restaurant
+      leave_review('So so', '3')
+      leave_review('Great', '5')
+      expect(page).to have_content('Average rating: 4')
     end
   end
 end

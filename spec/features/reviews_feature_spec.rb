@@ -32,8 +32,7 @@ feature 'reviewing' do
     expect(page).to_not have_content('Cannot delete restaurants you have not created')
 	end
 
-	scenario 'users are not allowed to write more than one review' do
-		make_restaurant
+	pending(scenario 'users are not allowed to write more than one review') do
 		make_review
 		make_review
 		expect(page).to have_content('Cannot add more than one review for a restaurant')
