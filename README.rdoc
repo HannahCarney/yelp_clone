@@ -1,28 +1,59 @@
-== README
+Yelp Clone 
+====
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Make a clone of Yelp using a walkthrough. Learn Ruby on Rails.
 
-Things you may want to cover:
+Technologies used
+----
+- Ruby
+- Rails
+- RSpec
+- JQuery
+- PostgresQL
+- Devise
+- Capybara
+- Devise
+- Omiauth
+- Heroku
 
-* Ruby version
+Objectives of exercise
+---- 
+- Rails
+ * Test-Driven-Development
+- How to log in using other means (facebook)
 
-* System dependencies
+To Do
+—---
+- [] HTML and CSS
+- [] Add endorsements 
+Set up postgresQL
+----
+[install](http://www.postgresql.org/download/)
 
-* Configuration
+```sh
+psql
+\l
+CREATE DATABASE yelp_clone_development ;
+CREATE DATABASE yelp_clone_test ;
+\q
+```
 
-* Database creation
+How to run test
+——
+```sh
+bundle install
+bin/rake db:migrate RAILS_ENV=test
+rspec
+```
 
-* Database initialization
+How to run locally
+——
+Open browser to http://localhost:9292/
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```sh
+bundle install
+bin/rake db:migrate RAILS_ENV=development
+rackup
+```
+I am [Hannah] from the December 2014 cohort of Makers Academy, London!
+[Hannah]:https://github.com/HannahCarney
