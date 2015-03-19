@@ -1,3 +1,69 @@
-#Yelp Clone
-====
-Making a clone of yelp. Walkthrough to learn Rails.
+Yelp Clone
+==========
+Walkthrough Yelp Clone tutorial to learn Rails
+-------------------------
+
+Objectives of exercise
+----
+
+- Learning Ruby on Rails
+* Test-Driven-Development
+- Log in with Facebook
+
+Technologies used
+----
+- Ruby
+- Rails
+- RSpec
+- JQuery
+- PostgresQL
+- Devise
+- Capybara
+- Devise
+- Omiauth
+
+To Do
+----
+- [ ] html and css
+- [ ] endorsements
+
+How to clone this repo
+----
+```sh
+git clone https://github.com/HannahCarney/yelp_clone.git
+cd yelp_clone
+```
+How to setup postgresQL
+----
+
+[install postgresQL](http://www.postgresql.org/download/)
+
+```sh
+psql
+\l
+CREATE DATABASE yelp_clone_development ;
+CREATE DATABASE yelp_clone_test ;
+\q
+```
+
+How to run tests
+----
+```sh
+bundle install
+bin/rake db:migrate RAILS_ENV=test
+rspec
+```
+
+How to run locally
+----
+
+Open browser to http://localhost:9292/
+
+```sh
+bundle install
+bin/rake db:migrate RAILS_ENV=development
+rackup
+```
+
+I am [Hannah] from the December 2014 cohort of Makers Academy, London!
+[Hannah]:https://github.com/HannahCarney
