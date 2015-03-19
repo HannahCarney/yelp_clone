@@ -33,18 +33,6 @@ How to clone this repo
 git clone https://github.com/HannahCarney/yelp_clone.git
 cd yelp_clone
 ```
-How to setup postgresQL
-----
-
-[install postgresQL](http://www.postgresql.org/download/)
-
-```sh
-psql
-\l
-CREATE DATABASE yelp_clone_development ;
-CREATE DATABASE yelp_clone_test ;
-\q
-```
 
 How to run tests
 ----
