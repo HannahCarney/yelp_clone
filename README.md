@@ -21,9 +21,9 @@ Objectives of exercise
 - How to log in using other means (facebook)
 
 To Do
-—----
-- [] HTML and CSS
-- [] Add endorsements 
+-----
+- [ ] HTML and CSS
+- [ ] Add endorsements 
 
 Set up postgreSQL
 -----
